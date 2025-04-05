@@ -1,16 +1,13 @@
-// level5.test.ts
 import { describe, it, expect } from 'vitest';
 import {
   detectXSS,
   detectSQLi,
   detectCommandInjection,
   detectPathTraversal,
-  detectNoSQLi,
   detectTemplateInjection,
   traverseAndCheck,
-  generateHash,
 } from '../src/utils';
-import { PayloadGuardEventType, PayloadCheckResult } from '../src/types';
+import { PayloadCheckResult } from '../src/types';
 
 describe('Level 5: Extreme Edge Cases and Advanced Attack Vectors', () => {
   describe('Zero-Day Exploit Simulations', () => {

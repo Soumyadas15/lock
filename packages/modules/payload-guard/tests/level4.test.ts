@@ -1,13 +1,9 @@
-// level4.test.ts
 import { describe, it, expect } from 'vitest';
 import {
   detectXSS,
   detectSQLi,
-  detectCommandInjection,
-  detectPathTraversal,
   detectNoSQLi,
   detectTemplateInjection,
-  traverseAndCheck,
 } from '../src/utils';
 import { PayloadGuardEventType } from '../src/types';
 

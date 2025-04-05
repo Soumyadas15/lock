@@ -1,5 +1,3 @@
-// src/secure-route.ts
-
 import { SecurityModule, composeModules, createContext } from './index';
 
 const moduleRegistry: Record<string, (config: any) => SecurityModule> = {};
