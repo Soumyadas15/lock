@@ -16,7 +16,6 @@ Lock is a **drop-in security toolkit** designed for modern applications. Whether
 - 🧠 **VPN and proxy filtering**
 - 📦 **Payload inspection**
 - 🧬 **CSRF protection**
-- ⚙️ **Fully framework-agnostic**
 
 ---
 
@@ -60,6 +59,16 @@ app.use('/api', middleware);
 ```ts
 export const GET = secureAppRoute(handler)(rateLimit({ limit: 10, windowMs: 10_000 }));
 ```
+
+## ✨ Check out modules
+
+✅ [Bot Detection](https://github.com/Soumyadas15/lock/tree/main/packages/modules/bot-detection)
+✅ [CSRF](https://github.com/Soumyadas15/lock/tree/main/packages/modules/csrf)
+✅ [Geo-Block](https://github.com/Soumyadas15/lock/tree/main/packages/modules/geo-block)
+✅ [IP Filter](https://github.com/Soumyadas15/lock/tree/main/packages/modules/ip-filter)
+✅ [Payload Guard](https://github.com/Soumyadas15/lock/tree/main/packages/modules/payload-guard)
+✅ [Rate Limit](https://github.com/Soumyadas15/lock/tree/main/packages/modules/rate-limit)
+✅ [VPN Detection](https://github.com/Soumyadas15/lock/tree/main/packages/modules/vpn-detection)
 
 ## 🧩 Framework Support
 
