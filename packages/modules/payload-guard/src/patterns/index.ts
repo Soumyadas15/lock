@@ -24,7 +24,7 @@ export const PATTERNS = {
   ],
 
   commandInjection: [
-    /(?:\$\(|\`|\|\s*[\w\d\s\-\/\\]+\s*\||\; \w+|\|\|\w+|\&\&\w+|\|\w+)/i,
+    /(?:\$\(|\`|\|\s*[\w\d\s\-\/\\]+\s*\||; \w+|\|\|\s*\w+|\&\&\s*\w+|(?<!\()\|\s*\w+)/i,
     /(?:\/bin\/(?:ba)?sh|cmd(?:\.exe)?|powershell(?:\.exe)?|wget\s|curl\s|nc\s|ncat\s|telnet\s|lftp\s)/i,
     /\$\(.*?\)|\`.*?\`/i,
     /(?:;|\||\|\||&&)\s*(?:id|whoami|cat|echo|rm|touch|chmod|chown|wget|curl|bash|sh|python|perl|ruby|php)/i,

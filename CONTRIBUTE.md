@@ -9,6 +9,7 @@ Thank you for considering a contribution to **Lock**! Whether you're fixing bugs
 ```
 packages/
 ├── core                → Main secure() + context logic
+├── main                → Central exposure of all modules
 ├── modules/
 │   ├── rate-limit      → Rate limiting module
 │   ├── bot-detection   → User-agent, fingerprint, behavioral heuristics
@@ -39,7 +40,7 @@ To create a new security module:
 2. Implement the `check(context, config)` function
 3. Implement `handleFailure()`
 4. Export it and register via `registerModule`
-5. Add your module to the main index.ts export for proper exposure
+5. Add your module to the `@lock-sdk/main` `index.ts` export for proper exposure
 6. Create a README.md in your module directory explaining usage and configuration
 7. Do write tests
 
@@ -72,17 +73,10 @@ feat: add 'user-agent regex' support to botDetector
 
 ---
 
-## 📣 Need Help?
-
-- Ask questions in [Discussions](https://github.com/lock-dev/lock/discussions)
-- File bugs via [Issues](https://github.com/lock-dev/lock/issues)
-
----
-
 ## ✨ Code of Conduct
 
 Please be respectful, kind, and inclusive. We follow the [Contributor Covenant](https://www.contributor-covenant.org/).
 
 ---
 
-Built with ❤️ by Lock Labs.
+Built with ❤️ by Lock Team.

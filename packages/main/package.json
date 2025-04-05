@@ -1,6 +1,6 @@
 {
   "name": "@lock-sdk/main",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "description": "Complete security framework for Lock with all modules",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
