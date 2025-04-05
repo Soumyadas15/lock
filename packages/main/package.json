@@ -1,0 +1,48 @@
+{
+  "name": "@lock-sdk/main",
+  "version": "1.0.0",
+  "description": "Complete security framework for Lock with all modules",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@lock-sdk/core": "^1.0.0",
+    "@lock-sdk/ip-filter": "^1.0.0",
+    "@lock-sdk/geo-block": "^1.0.0",
+    "@lock-sdk/vpn-detection": "^1.0.0",
+    "@lock-sdk/bot-detection": "^1.0.0",
+    "@lock-sdk/csrf": "^1.0.0",
+    "@lock-sdk/payload-guard": "^1.0.0",
+    "@lock-sdk/rate-limit": "^1.0.0"
+  },
+  "keywords": [
+    "security",
+    "api",
+    "lock-dev",
+    "all-in-one"
+  ],
+  "author": "Lock team",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@lock-sdk/eslint-config": "workspace:*",
+    "@lock-sdk/typescript-config": "workspace:*"
+  }
+}

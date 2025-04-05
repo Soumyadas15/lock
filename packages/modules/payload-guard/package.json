@@ -1,0 +1,47 @@
+{
+  "name": "@lock-sdk/payload-guard",
+  "version": "1.0.0",
+  "description": "Payload guard detection module for Lock security framework",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --external @lock-sdk/sdk/core",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "vitest"
+  },
+  "keywords": [
+    "security",
+    "payload-validation",
+    "input-sanitization",
+    "lock"
+  ],
+  "author": "Lock team",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@lock-sdk/core": "^1.0.0",
+    "lru-cache": "^11.1.0"
+  },
+  "peerDependencies": {
+    "@lock-sdk/core": "^1.0.0"
+  },
+  "devDependencies": {
+    "@lock-sdk/eslint-config": "workspace:*",
+    "@lock-sdk/typescript-config": "workspace:*",
+    "@types/node": "^22.13.10"
+  }
+}

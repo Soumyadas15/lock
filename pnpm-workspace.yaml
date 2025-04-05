@@ -1,0 +1,6 @@
+packages:
+  - 'packages/*'
+  - 'packages/*'
+  - 'packages/core/*'
+  - 'packages/modules/*'
+  - 'packages/adapters/*'

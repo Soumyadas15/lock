@@ -1,0 +1,48 @@
+{
+  "name": "@lock-sdk/next-adapter",
+  "version": "1.0.0",
+  "description": "Nextjs adapter module for lock.dev security framework",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --external @lock-sdk/core next",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "vitest"
+  },
+  "keywords": [
+    "security",
+    "next.js",
+    "lock",
+    "nextjs-adapter"
+  ],
+  "author": "Lock team",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@lock-sdk/core": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@lock-sdk/core": "^1.0.0",
+    "next": ">=12.0.0"
+  },
+  "devDependencies": {
+    "@lock-sdk/eslint-config": "workspace:*",
+    "@lock-sdk/typescript-config": "workspace:*",
+    "@types/node": "^22.13.10",
+    "next": "^14.0.0"
+  }
+}
